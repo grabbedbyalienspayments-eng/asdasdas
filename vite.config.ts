@@ -18,8 +18,11 @@ export default defineConfig({
     sourcemap: false,
     outDir: 'dist',
     emptyOutDir: true,
+    // Remove or simplify rollupOptions
     rollupOptions: {
-      input: resolve(__dirname, 'index.html')
+      input: {
+        main: resolve(__dirname, 'index.html')
+      }
     }
   },
   resolve: {
